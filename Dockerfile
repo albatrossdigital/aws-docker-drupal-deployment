@@ -16,7 +16,7 @@ ADD ./deployment.drushrc.php ~/.drush/deployment.drushrc.php
 
 # Retrieve drupal
 RUN rm -rf /var/www/ ; cd /var ;
-RUN git clone https://github.com/fusionx1/x-team-drush1.git /var/drupal
+RUN git clone https://github.com/albatrossdigital/soar-drops-7.git /var/drupal
 RUN mv /var/drupal/ /var/www/
 RUN cd /var/www ; drush dl drush_deployment ;
 RUN chmod a+w /var/www/sites/default ; mkdir /var/www/sites/default/files ; chown -R www-data:www-data /var/www/
